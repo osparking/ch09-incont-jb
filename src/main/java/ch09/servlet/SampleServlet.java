@@ -7,7 +7,7 @@ import javax.servlet.http.HttpSession;
 @SuppressWarnings("serial")
 public class SampleServlet extends HttpServlet{
 	public boolean isAuthenticated(HttpServletRequest request) {
-		HttpSession session = request.getSession();
+		HttpSession session = request.getSession(false);
 		if (session == null) {
 			return false;
 		}
